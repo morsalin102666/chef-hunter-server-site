@@ -1,9 +1,11 @@
 const express = require('express')
+const cors = require('cors')
 const app = express()
 const port = process.env.PORT || 5000
 
 const allChef = require("./jsonFile/chefData.json")
 
+app.use(cors())
 
 app.get('/', (req, res) => {
     res.send('Wellcome to my server side')
